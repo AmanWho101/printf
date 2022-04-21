@@ -1,18 +1,18 @@
 #include "main.h"
-
 /**
  * print_char - print char.
  * @list: va_list.
  *
  * Return: 1
- **/
+ */
 int print_char(va_list list)
 {
-int aux;
+	int aux;
 
-aux = va_arg(list, int);
+	aux = va_arg(list, int);
 
-_putchar(aux);
+	_putchar(aux);
 
-return (1);
+	return (1);
 }
+

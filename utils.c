@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * _strlen - Calculate the length of a string
  * @str: String
@@ -8,26 +9,28 @@
  **/
 int _strlen(const char *str)
 {
-int i;
+	int i;
 
-for (i = 0; str[i] != 0; i++)
-;
+	for (i = 0; str[i] != 0; i++)
+		;
 
-return (i);
+	return (i);
 }
 
 /**
- * print - print char
- * @str: string
+ * print - print char.
+ * @str: string.
  *
- * Return: string length
+ * Return: string length.
  */
+
 int print(char *str)
 {
-int i;
+	int i;
 
-for (i = 0; str[i] != '\0'; ++i)
-_putchar(str[i]);
+	for (i = 0; str[i] != '\0'; ++i)
+		_putchar(str[i]);
 
-return (i);
+	return (i);
 }
+
