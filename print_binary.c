@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_binary - Print a number in base 2
@@ -8,12 +8,12 @@
  **/
 int print_binary(va_list list)
 {
-char *p_buff;
-int size;
+	char *p_buff;
+	int size;
 
-p_buff = itoa(va_arg(list, unsigned int), 2);
+	p_buff = itoa(va_arg(list, unsigned int), 2);
 
-size = print(p_buff);
+	size = print(p_buff);
 
-return (size);
+	return (size);
 }

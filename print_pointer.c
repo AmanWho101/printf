@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
 
 int _strcmp(char *, char *);
@@ -11,22 +11,22 @@ int _strcmp(char *, char *);
  **/
 int print_pointer(va_list list)
 {
-char *p_buff;
-int size;
+	char *p_buff;
+	int size;
 
-p_buff = itoa(va_arg(list, unsigned long int), 16);
+	p_buff = itoa(va_arg(list, unsigned long int), 16);
 
-if (!_strcmp(p_buff, "0"))
-return (print("(nil)"));
+	if (!_strcmp(p_buff, "0"))
+		return (print("(nil)"));
 
-size = print("0x");
+	size = print("0x");
 
-if (!_strcmp(p_buff, "-1"))
-size += print("ffffffffffffffff");
-else
-size += print(p_buff);
+	if (!_strcmp(p_buff, "-1"))
+		size += print("ffffffffffffffff");
+	else
+		size += print(p_buff);
 
-return (size);
+	return (size);
 }
 
 /**
@@ -37,13 +37,14 @@ return (size);
  **/
 int _strcmp(char *s1, char *s2)
 {
-int i;
+	int i;
 
-for (i = 0; s1[i] != '\0'; i++)
-{
-if (s1[i] != s2[i])
-return (s1[i] - s2[i]);
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+	}
+
+	return (0);
 }
 
-return (0);
-}

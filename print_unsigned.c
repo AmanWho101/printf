@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_unsigned - Print a unsigned int
@@ -8,12 +8,12 @@
  **/
 int print_unsigned(va_list list)
 {
-char *p_buff;
-int size;
+	char *p_buff;
+	int size;
 
-p_buff = itoa(va_arg(list, unsgned int), 10);
+	p_buff = itoa(va_arg(list, unsigned int), 10);
 
-size = print((p_buff != NULL) ? p_buff : "NULL");
+	size = print((p_buff != NULL) ? p_buff : "NULL");
 
-return (size);
+	return (size);
 }
