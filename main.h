@@ -1,16 +1,16 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
-/* utils.c */
+/* utlils.c */
 int _strlen(const char *);
 int print(char *);
 char *itoa(long int, int);
 
-/* printf.c */
+/*U printf.c */
 int _printf(const char *, ...);
 
 /* handler.c */
@@ -27,7 +27,6 @@ int print_unsigned(va_list);
 int print_octal(va_list);
 int print_hexadecimal_low(va_list);
 int print_hexadecimal_upp(va_list);
-int print_pointer(va_list);
 int print_rev_string(va_list);
 
 /* _putchar.c */
@@ -42,9 +41,8 @@ int buffer(char);
  **/
 typedef struct _format
 {
-	char type;
-	int (*f)(va_list);
+char type;
+int (*f)(va_list);
 } format;
-
 
 #endif
